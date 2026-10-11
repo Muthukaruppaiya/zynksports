@@ -1,0 +1,69 @@
+.cball {
+  position: relative;
+  display: block;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(circle at 32% 28%, #ff7a6e 0%, #e10600 32%, #9b0400 70%, #4d0200 100%);
+  box-shadow:
+    inset calc(var(--s) * -0.1) calc(var(--s) * -0.12) calc(var(--s) * 0.22) rgba(0, 0, 0, 0.45),
+    inset calc(var(--s) * 0.07) calc(var(--s) * 0.07) calc(var(--s) * 0.14) rgba(255, 255, 255, 0.25),
+    0 calc(var(--s) * 0.22) calc(var(--s) * 0.4) rgba(120, 0, 0, 0.3);
+}
+
+.cball.white {
+  background: radial-gradient(circle at 32% 28%, #ffffff 0%, #f1f1ee 35%, #c9ccd2 75%, #8d929b 100%);
+  box-shadow:
+    inset calc(var(--s) * -0.1) calc(var(--s) * -0.12) calc(var(--s) * 0.22) rgba(0, 0, 0, 0.25),
+    0 calc(var(--s) * 0.22) calc(var(--s) * 0.4) rgba(15, 39, 68, 0.2);
+}
+
+.cball-seam {
+  position: absolute;
+  top: -4%;
+  bottom: -4%;
+  left: 36%;
+  right: 36%;
+  border-radius: 50%;
+  border-left: max(2px, calc(var(--s) * 0.025)) dashed rgba(255, 255, 255, 0.85);
+  border-right: max(2px, calc(var(--s) * 0.025)) dashed rgba(255, 255, 255, 0.85);
+  animation: seam-spin 2.8s linear infinite;
+}
+
+.cball.white .cball-seam {
+  border-color: rgba(225, 6, 0, 0.7);
+}
+
+.cball-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.55), transparent 28%);
+}
+
+@keyframes seam-spin {
+  0% {
+    transform: translateX(-75%) scaleX(0.2);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0) scaleX(1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(75%) scaleX(0.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cball-seam {
+    animation: none;
+  }
+}

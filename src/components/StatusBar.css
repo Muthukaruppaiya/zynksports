@@ -1,0 +1,86 @@
+.status-bar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.status-step {
+  position: relative;
+  flex: 1;
+  min-width: 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(91, 107, 130, 0.75);
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(20, 33, 61, 0.12);
+  border: 2px solid rgba(20, 33, 61, 0.18);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.status-line {
+  position: absolute;
+  top: 6px;
+  left: calc(50% + 10px);
+  width: calc(100% - 20px);
+  height: 2px;
+  background: rgba(20, 33, 61, 0.1);
+}
+
+.status-step.done .status-dot {
+  background: linear-gradient(135deg, var(--zynk-yellow-hot), var(--zynk-yellow));
+  border-color: var(--zynk-yellow);
+  box-shadow: 0 0 16px rgba(255, 230, 0, 0.45);
+}
+
+.status-step.done .status-line {
+  background: linear-gradient(90deg, var(--zynk-yellow), rgba(255, 230, 0, 0.25));
+}
+
+.status-step.done {
+  color: var(--zynk-navy);
+}
+
+.status-step.current span {
+  color: var(--zynk-red);
+}
+
+.status-bar.compact {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.status-bar.compact .status-step {
+  min-width: auto;
+  flex: 0;
+  flex-direction: row;
+}
+
+.status-bar.compact .status-line {
+  display: none;
+}
+
+.status-compact-label {
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .status-step {
+    min-width: 0;
+    font-size: 0.62rem;
+    line-height: 1.2;
+  }
+}

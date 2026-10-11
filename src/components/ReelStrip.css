@@ -1,0 +1,129 @@
+.reel-strip {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1.5rem max(1rem, calc((100vw - 1180px) / 2)) 2rem;
+  perspective: 1200px;
+  scrollbar-width: none;
+}
+
+.reel-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-card-wrap {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.reel-card {
+  position: relative;
+  display: block;
+  width: 220px;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  padding: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  scroll-snap-align: start;
+  background: #0b1220;
+  box-shadow:
+    0 0 0 4px #fff,
+    0 18px 38px rgba(15, 23, 42, 0.18);
+  transition: box-shadow 0.35s var(--ease);
+}
+
+.reel-card:hover {
+  box-shadow:
+    0 0 0 4px var(--zynk-yellow),
+    0 30px 50px rgba(15, 23, 42, 0.28);
+}
+
+.reel-card .tilt-glare {
+  z-index: 3;
+}
+
+.reel-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease);
+}
+
+.reel-card:hover video {
+  transform: scale(1.05);
+}
+
+.reel-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, transparent 30%, transparent 55%, rgba(0, 0, 0, 0.75) 100%);
+  pointer-events: none;
+}
+
+.reel-card-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--zynk-black);
+  background: var(--zynk-yellow);
+}
+
+.reel-card-play {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.reel-card-meta {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #fff;
+}
+
+.reel-card-meta strong {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.reel-card-meta small {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 560px) {
+  .reel-card {
+    width: 170px;
+  }
+}

@@ -1,0 +1,357 @@
+﻿export const STORE = {
+  name: 'Zynk - The Premium Cricket Store',
+  shortName: 'ZYNK',
+  handle: '@zynkcricketstore',
+  instagram: 'https://www.instagram.com/zynkcricketstore/',
+  reels: 'https://www.instagram.com/zynkcricketstore/reels/',
+  whatsapp: '918838150242',
+  whatsappMessage: 'Hi Zynk! I want to place an order.',
+  email: 'hello@zynkcricket.store',
+  phone: '+91 88381 50242',
+  address: 'Ships Across India & Worldwide',
+  tagline: 'Good Gear. Bigger Dreams.',
+  description:
+    'Cricket bats & gear · Best deals · Player-tested · Custom bat stickers & services.',
+  logo: '/brand/logo.png',
+  followers: '4.7K',
+  posts: '102',
+}
+
+export const CATEGORIES = [
+  { id: 'bats', name: 'Bats', count: 18, image: '/media/v/reel-7.jpg' },
+  { id: 'gloves', name: 'Gloves', count: 8, image: '/media/ig-7.jpg' },
+  { id: 'pads', name: 'Pads', count: 6, image: '/media/ig-8.jpg' },
+  { id: 'balls', name: 'Balls', count: 10, image: '/media/ig-9.jpg' },
+  { id: 'kits', name: 'Kits & Stickers', count: 14, image: '/media/ig-6.jpg' },
+  { id: 'bags', name: 'Bags', count: 5, image: '/media/ig-10.jpg' },
+]
+
+/** Only Instagram account media */
+export const IG_MEDIA = {
+  hero: '/media/v/reel-4.jpg',
+  store: '/media/v/reel-6.jpg',
+  gallery: [
+    '/media/ig-1.jpg',
+    '/media/ig-2.jpg',
+    '/media/v/reel-7.jpg',
+    '/media/ig-4.jpg',
+    '/media/v/reel-5.jpg',
+    '/media/ig-6.jpg',
+    '/media/v/reel-3.jpg',
+    '/media/ig-8.jpg',
+  ],
+}
+
+export const PRODUCTS = [
+  {
+    id: 'p1',
+    name: 'ZYNK Red Edition Bat',
+    category: 'bats',
+    price: 9999,
+    mrp: 12999,
+    rating: 4.9,
+    reviews: 48,
+    stock: 12,
+    badge: 'Red Edition',
+    image: '/media/ig-1.jpg',
+    description: 'Player-tested ZYNK Red Edition willow — as featured on @zynkcricketstore.',
+  },
+  {
+    id: 'p2',
+    name: 'ZYNK Black Edition Bat',
+    category: 'bats',
+    price: 8999,
+    mrp: 11499,
+    rating: 4.8,
+    reviews: 36,
+    stock: 15,
+    badge: 'Bestseller',
+    image: '/media/v/reel-7.jpg',
+    description: 'Black edition ZYNK branding with balanced pickup for stroke makers.',
+  },
+  {
+    id: 'p3',
+    name: 'ZYNK Signature Willow',
+    category: 'bats',
+    price: 11499,
+    mrp: 13999,
+    rating: 4.9,
+    reviews: 22,
+    stock: 8,
+    badge: 'Signature',
+    image: '/media/v/reel-5.jpg',
+    description: 'Hand-picked signature willow, knocked-in and match ready.',
+  },
+  {
+    id: 'p4',
+    name: 'Custom Bat Stickers',
+    category: 'kits',
+    price: 799,
+    mrp: 999,
+    rating: 4.9,
+    reviews: 61,
+    stock: 80,
+    badge: 'Custom',
+    image: '/media/ig-6.jpg',
+    description: 'Custom ZYNK bat stickers & services — DM to personalise.',
+  },
+  {
+    id: 'p5',
+    name: 'Player Grip Gloves',
+    category: 'gloves',
+    price: 1899,
+    mrp: 2399,
+    rating: 4.6,
+    reviews: 19,
+    stock: 28,
+    badge: null,
+    image: '/media/ig-7.jpg',
+    description: 'Grip-focused batting gloves from the Zynk gear line.',
+  },
+  {
+    id: 'p6',
+    name: 'Pro Series Pads',
+    category: 'pads',
+    price: 3299,
+    mrp: 3999,
+    rating: 4.5,
+    reviews: 14,
+    stock: 16,
+    badge: null,
+    image: '/media/ig-8.jpg',
+    description: 'Lightweight protection for nets and club matches.',
+  },
+  {
+    id: 'p7',
+    name: 'Leather Match Ball',
+    category: 'balls',
+    price: 899,
+    mrp: 1199,
+    rating: 4.7,
+    reviews: 40,
+    stock: 60,
+    badge: 'Deal',
+    image: '/media/ig-9.jpg',
+    description: 'Match-ready leather ball — player tested.',
+  },
+  {
+    id: 'p8',
+    name: 'ZYNK Kit Bag',
+    category: 'bags',
+    price: 2499,
+    mrp: 3199,
+    rating: 4.6,
+    reviews: 17,
+    stock: 18,
+    badge: 'New',
+    image: '/media/ig-10.jpg',
+    description: 'Spacious kit bag for full cricket set & bat sleeve.',
+  },
+]
+
+export const ORDER_STATUSES = [
+  'Placed',
+  'Confirmed',
+  'Packed',
+  'Shipped',
+  'Out for Delivery',
+  'Delivered',
+]
+
+export const INITIAL_ORDERS = [
+  {
+    id: 'ZYN-1042',
+    date: '2026-10-08',
+    total: 11898,
+    status: 'Shipped',
+    statusIndex: 3,
+    items: [
+      { productId: 'p1', name: 'ZYNK Red Edition Bat', qty: 1, price: 9999 },
+      { productId: 'p5', name: 'Player Grip Gloves', qty: 1, price: 1899 },
+    ],
+    customer: 'Arjun Mehta',
+    phone: '+91 98765 11111',
+    address: '12, Green Avenue, Pune',
+  },
+  {
+    id: 'ZYN-1038',
+    date: '2026-10-05',
+    total: 12298,
+    status: 'Delivered',
+    statusIndex: 5,
+    items: [
+      { productId: 'p3', name: 'ZYNK Signature Willow', qty: 1, price: 11499 },
+      { productId: 'p4', name: 'Custom Bat Stickers', qty: 1, price: 799 },
+    ],
+    customer: 'Priya Nair',
+    phone: '+91 98765 22222',
+    address: '88, Lake View, Bengaluru',
+  },
+  {
+    id: 'ZYN-1045',
+    date: '2026-10-10',
+    total: 899,
+    status: 'Packed',
+    statusIndex: 2,
+    items: [{ productId: 'p7', name: 'Leather Match Ball', qty: 1, price: 899 }],
+    customer: 'Rohan Das',
+    phone: '+91 98765 33333',
+    address: '4B, Stadium Road, Chennai',
+  },
+]
+
+export const INITIAL_REVIEWS = [
+  {
+    id: 'r1',
+    name: 'Vikram S.',
+    rating: 5,
+    product: 'ZYNK Red Edition Bat',
+    text: 'Pickup feels unreal. Ordered via WhatsApp — fast reply from the Zynk team.',
+    date: '2026-10-02',
+    approved: true,
+  },
+  {
+    id: 'r2',
+    name: 'Ananya K.',
+    rating: 5,
+    product: 'Custom Bat Stickers',
+    text: 'Stickers look premium, exactly like the Instagram posts.',
+    date: '2026-09-28',
+    approved: true,
+  },
+  {
+    id: 'r3',
+    name: 'Suresh R.',
+    rating: 5,
+    product: 'ZYNK Signature Willow',
+    text: 'Visited the store — the bat wall is insane. Good gear, bigger dreams — true.',
+    date: '2026-09-20',
+    approved: true,
+  },
+  {
+    id: 'r4',
+    name: 'Karthik M.',
+    rating: 5,
+    product: 'ZYNK Black Edition Bat',
+    text: 'Great punch and perfect balance. Delivery was super quick.',
+    date: '2026-09-18',
+    approved: true,
+  },
+  {
+    id: 'r5',
+    name: 'Meera P.',
+    rating: 5,
+    product: 'ZYNK Black Edition Bat',
+    text: 'Looks exactly like the reel. Shipping across India was quick.',
+    date: '2026-10-06',
+    approved: false,
+  },
+]
+
+export const INVOICES = [
+  {
+    id: 'INV-2201',
+    orderId: 'ZYN-1042',
+    customer: 'Arjun Mehta',
+    amount: 11898,
+    tax: 1800,
+    date: '2026-10-08',
+    status: 'Paid',
+    method: 'UPI',
+  },
+  {
+    id: 'INV-2198',
+    orderId: 'ZYN-1038',
+    customer: 'Priya Nair',
+    amount: 12298,
+    tax: 1876,
+    date: '2026-10-05',
+    status: 'Paid',
+    method: 'Card',
+  },
+  {
+    id: 'INV-2204',
+    orderId: 'ZYN-1045',
+    customer: 'Rohan Das',
+    amount: 899,
+    tax: 136,
+    date: '2026-10-10',
+    status: 'Pending',
+    method: 'COD',
+  },
+]
+
+/** Real reels downloaded from @zynkcricketstore (video + audio) */
+export const VIDEO_CATALOGUE = [
+  {
+    id: 'reel-4',
+    title: 'Bat Wall Tour',
+    tag: 'Store',
+    src: '/media/v/reel-4.mp4',
+    poster: '/media/v/reel-4.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/DeHjINfTb63/',
+  },
+  {
+    id: 'reel-7',
+    title: 'ZYNK Bats Unboxed',
+    tag: 'Bats',
+    src: '/media/v/reel-7.mp4',
+    poster: '/media/v/reel-7.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/Dd1d1xcTXTD/',
+  },
+  {
+    id: 'reel-5',
+    title: 'Red Edition Handover',
+    tag: 'Customers',
+    src: '/media/v/reel-5.mp4',
+    poster: '/media/v/reel-5.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/Dd_aQ3OzW69/',
+  },
+  {
+    id: 'reel-3',
+    title: 'Walk Into Zynk',
+    tag: 'Store',
+    src: '/media/v/reel-3.mp4',
+    poster: '/media/v/reel-3.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/DeMyv4UBBa6/',
+  },
+  {
+    id: 'reel-6',
+    title: 'At The Counter',
+    tag: 'Store',
+    src: '/media/v/reel-6.mp4',
+    poster: '/media/v/reel-6.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/DeDnbLKT3Wf/',
+  },
+  {
+    id: 'reel-2',
+    title: 'Inside The Lounge',
+    tag: 'Fun',
+    src: '/media/v/reel-2.mp4',
+    poster: '/media/v/reel-2.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/DeRFZJOB8D0/',
+  },
+  {
+    id: 'reel-1',
+    title: 'Team Zynk Moments',
+    tag: 'Fun',
+    src: '/media/v/reel-1.mp4',
+    poster: '/media/v/reel-1.jpg',
+    permalink: 'https://www.instagram.com/zynkcricketstore/reel/DeUNhhmTakC/',
+  },
+]
+
+export const REEL_VIDEOS = VIDEO_CATALOGUE
+export const FLOAT_VIDEO = VIDEO_CATALOGUE[0]
+
+export function formatINR(n) {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(n)
+}
+
+export function whatsappLink(message = STORE.whatsappMessage) {
+  return `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(message)}`
+}

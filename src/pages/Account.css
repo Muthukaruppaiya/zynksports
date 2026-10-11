@@ -1,0 +1,68 @@
+.account-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.25rem;
+}
+
+.account-card {
+  padding: 1.5rem;
+}
+
+.account-card h2 {
+  font-size: 1.9rem;
+  margin: 0.35rem 0 0.65rem;
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.profile-block {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.profile-block > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem;
+  border-radius: 14px;
+  background: rgba(15, 39, 68, 0.05);
+}
+
+.profile-block span {
+  font-size: 0.78rem;
+  color: var(--mist);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.quick-links {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.quick-links a {
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(15, 39, 68, 0.05);
+  border: 1px solid var(--line);
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.quick-links a:hover {
+  background: rgba(255, 230, 0, 0.28);
+}
+
+@media (max-width: 800px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+}

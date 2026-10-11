@@ -1,0 +1,40 @@
+{
+  "posts": [],
+  "reels": [
+    {
+      "id": "reel-1",
+      "title": "Zynk Reel 1",
+      "permalink": "https://www.instagram.com/zynkcricketstore/reel/Dd1d1xcTXTD/",
+      "poster": "/media/reel-1-poster.jpg",
+      "src": null
+    },
+    {
+      "id": "reel-2",
+      "title": "Zynk Reel 2",
+      "permalink": "https://www.instagram.com/zynkcricketstore/reel/DeDnbLKT3Wf/",
+      "poster": "/media/reel-2-poster.jpg",
+      "src": null
+    },
+    {
+      "id": "reel-3",
+      "title": "Zynk Reel 3",
+      "permalink": "https://www.instagram.com/zynkcricketstore/reel/DeMyv4UBBa6/",
+      "poster": "/media/reel-3-poster.jpg",
+      "src": null
+    },
+    {
+      "id": "reel-4",
+      "title": "Zynk Reel 4",
+      "permalink": "https://www.instagram.com/zynkcricketstore/reel/DeUNhhmTakC/",
+      "poster": "/media/reel-4-poster.jpg",
+      "src": null
+    }
+  ],
+  "logo": "/brand/logo.png",
+  "colors": [
+    "#FFE600",
+    "#000000",
+    "#E10600",
+    "#FFFFFF"
+  ]
+}

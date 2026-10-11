@@ -1,0 +1,46 @@
+.shop-toolbar {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.shop-toolbar input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  outline: none;
+}
+
+.shop-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.shop-filters button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--mist);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.shop-filters button.active,
+.shop-filters button:hover {
+  background: var(--zynk-navy);
+  border-color: var(--zynk-navy);
+  color: #fff;
+}
+
+.empty {
+  color: var(--mist);
+  margin-top: 2rem;
+  text-align: center;
+}

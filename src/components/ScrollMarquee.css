@@ -1,0 +1,71 @@
+.smq {
+  position: relative;
+  height: 170px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.smq-band {
+  position: absolute;
+  left: -5%;
+  right: -5%;
+  top: 50%;
+  padding: 0.6rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.smq-band.navy {
+  background: linear-gradient(180deg, #16355c, var(--zynk-navy));
+  transform: translateY(-50%) rotate(-3deg);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.25),
+    0 18px 36px rgba(15, 39, 68, 0.25);
+  z-index: 2;
+}
+
+.smq-band.yellow {
+  background: linear-gradient(180deg, var(--zynk-yellow-hot), var(--zynk-yellow));
+  transform: translateY(-50%) rotate(2.5deg);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -3px 0 rgba(160, 140, 0, 0.35),
+    0 12px 26px rgba(160, 140, 0, 0.25);
+  z-index: 1;
+}
+
+.smq-track {
+  display: inline-flex;
+  gap: 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.smq-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.smq-band.navy .smq-track {
+  color: #fff;
+}
+
+.smq-band.navy i {
+  color: var(--zynk-yellow);
+  font-style: normal;
+}
+
+.smq-band.yellow .smq-track {
+  color: var(--zynk-navy);
+}
+
+.smq-band.yellow i {
+  color: var(--zynk-red);
+  font-style: normal;
+}

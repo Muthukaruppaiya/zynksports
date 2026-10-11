@@ -1,0 +1,103 @@
+.orders-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.orders-list,
+.order-detail {
+  padding: 1rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.95rem;
+  border-radius: 14px;
+  margin-bottom: 0.45rem;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.order-item:hover,
+.order-item.active {
+  background: rgba(15, 39, 68, 0.04);
+  border-color: rgba(15, 39, 68, 0.18);
+}
+
+.order-item strong {
+  display: block;
+}
+
+.order-item span {
+  color: var(--mist);
+  font-size: 0.82rem;
+}
+
+.order-item-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.order-detail-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.order-detail h3 {
+  font-size: 1.5rem;
+}
+
+.order-detail h4 {
+  margin: 1.25rem 0 0.65rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mist);
+}
+
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.order-ship p {
+  color: var(--mist);
+}
+
+.order-total {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 860px) {
+  .orders-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .order-detail-head {
+    flex-wrap: wrap;
+  }
+}
